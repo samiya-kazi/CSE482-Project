@@ -1,0 +1,99 @@
+body {
+	margin: 0;
+	font-family: Rockwell, Arial;
+}
+
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #1b9aa1;
+	overflow: hidden;
+}
+
+
+.navbar-links {
+	display: inline;
+}
+
+.navitem {
+	float: right;
+	display: block;
+	padding: 20px 25px;
+}
+
+.navlink {
+	text-decoration: none;
+	color: white;
+}
+
+.navitem:hover {
+  	background-color: #1b5740;
+}
+
+#logo {
+	float: left;
+}
+
+.main {
+	margin-top: 10px;
+	display: block;
+	height: auto;
+	width: auto;
+}
+
+.site-info {
+	display: inline-block;
+	width: 40%;
+	margin: 0% 5%;
+}
+
+.login-section {
+	display: inline-block;
+	width: 40%;
+	margin: 0% 4%;
+}
+
+#landing-image {
+	width: 80%;
+}
+
+.form-input {
+  	width: 100%;
+	padding: 12px 10px;
+	margin: 10px 10px 20px 0px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.login-form {
+	border-radius: 5px;
+  	background-color: #cce0df;
+  	padding: 20px;
+  	margin: 15%;
+}
+
+.register-form {
+	border-radius: 5px;
+  	background-color: #cce0df;
+  	padding: 20px;
+  	margin: 20px 200px;
+}
+
+button {
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #1b5740;
+  	border: none;
+  	color: white;
+  	padding: 15px 32px;
+  	text-align: center;
+  	cursor: pointer;
+}
+
+.alert {
+	color: red;
+}
