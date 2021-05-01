@@ -29,7 +29,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nutri-Journal</title>
+	<title>Nutri-Diary</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
 		<div class="navbar-links">
 			<ul class="nav-link-list">
 				<li class="navitem"><a class="navlink" href="register.php">Register</a></li>
-				<li class="navitem"  id="logo"><a class="navlink" href="index.php">Nutri-Journal</a></li>
+				<li class="navitem"  id="logo"><a class="navlink" href="index.php">Nutri-Diary</a></li>
 			</ul>
 		</div>
 	</div>

@@ -15,9 +15,13 @@
 			$resultRow = mysqli_fetch_assoc($result);
 			$uid = $resultRow['id'];
 			$name = $resultRow['name'];
+			$date = date("d/m/y");
+
 			session_start();
 			$_SESSION['uid'] = $uid;
 			$_SESSION['name'] = $name;
+			$_SESSION['date'] = $date;
+	
 			header("Location:home.php");
 		}
 	}
@@ -27,7 +31,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nutri-Journal</title>
+	<title>Nutri-Diary</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -35,14 +39,14 @@
 		<div class="navbar-links">
 			<ul class="nav-link-list">
 				<li class="navitem"><a class="navlink" href="register.php">Register</a></li>
-				<li class="navitem"  id="logo"><a class="navlink" href="index.php">Nutri-Journal</a></li>
+				<li class="navitem"  id="logo"><a class="navlink" href="index.php">Nutri-Diary</a></li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="main">
 		<div class="site-info">
-			<h1>Welcome to Nutri-Journal!</h1>
+			<h1>Welcome to Nutri-Diary!</h1>
 			<img id="landing-image" src="images/healthy-woman.png">
 			<h4>Track your calories and macro nutrients to reach your health goals!</h4>
 		</div>

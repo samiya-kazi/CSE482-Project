@@ -56,7 +56,7 @@ body {
 }
 
 #landing-image {
-	width: 80%;
+	width: 75%;
 }
 
 .form-input {
@@ -72,7 +72,7 @@ body {
 	border-radius: 5px;
   	background-color: #cce0df;
   	padding: 10px;
-  	margin: 10%;
+  	margin: 0%, 10%;
 }
 
 .register-form {
@@ -97,4 +97,47 @@ button {
 
 .alert {
 	color: red;
+}
+
+#welcome {
+	text-align: center;
+}
+
+#journal-section {
+	display: inline-block;
+	width: 40%;
+	margin: 0 4% 0 5%;
+}
+
+#food-search {
+	display: inline-block;
+	width: 40%;
+	margin: 0 5% 0 4%;
+}
+
+#search-button {
+	display: inline-block;
+}
+
+.entry {
+	margin: 2% 10%;
+	padding: 2% 15%;
+	border: 1px solid grey;
+	border-radius: 15px;
+	box-shadow: 10px 10px 10px #428779;
+}
+
+.entry-date {
+	text-align: center;
+}
+
+.meal-type {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+th, tr, td {
+	text-align: center;
+	width: 150px;
+	padding: 5px;
 }
