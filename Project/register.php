@@ -1,3 +1,30 @@
+<?php  
+	include_once 'includes/db.php';
+
+	if(isset($_POST['email'])) {
+		$email = $_POST['email'];
+		$sql = "SELECT * FROM users WHERE email = '".$email."';";
+
+		$result = mysqli_query($conn, $sql);
+		$resultCheck = mysqli_num_rows($result);
+
+		if($resultCheck == 0) {
+			$email = $_POST['email'];
+			$name = $_POST['name'];
+			$password = $_POST['password'];
+			$gender = $_POST['gender'];
+
+			$sql1 = "INSERT INTO users (email, name, password, gender) VALUES ('".$email."', '".$name."', '".$password."', '".$gender."');";
+
+			$result = mysqli_query($conn, $sql1);
+
+		} else {
+			echo "email is already being used.";
+		}
+
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +41,7 @@
 		</div>
 	</div>
 	<div class="register-form">
-		<form name="registration-form">
+		<form name="registration-form" method="POST" action="register-status.php">
 			<h1>Registration</h1>
 
 			<label for="name" class="form-label">Name:</label>

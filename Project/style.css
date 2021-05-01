@@ -45,7 +45,8 @@ body {
 .site-info {
 	display: inline-block;
 	width: 40%;
-	margin: 0% 5%;
+	margin: 0% 4%;
+	align-items: center;
 }
 
 .login-section {
@@ -70,8 +71,8 @@ body {
 .login-form {
 	border-radius: 5px;
   	background-color: #cce0df;
-  	padding: 20px;
-  	margin: 15%;
+  	padding: 10px;
+  	margin: 10%;
 }
 
 .register-form {
