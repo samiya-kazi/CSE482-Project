@@ -6,27 +6,37 @@
 	$date = $_SESSION['date'];
 	$newDate = date("Y-m-d", strtotime($date));
 
+
+	//SQL query for getting breakfast food details
 	$sqlBreakfast = "SELECT food.food_name, meal.servings, meal.total_cal, meal.total_fat, meal.total_protein, meal.total_sugar FROM meal JOIN food ON meal.f_id = food.f_id WHERE u_id = '".$uid."' AND meal_type = 'Breakfast' AND date = '".$newDate."';";
 
 	$resultBreakfast = mysqli_query($conn, $sqlBreakfast);
 	$resultBreakfastCheck = mysqli_num_rows($resultBreakfast);
 
+
+	//SQL query for getting lunch food details
 	$sqlLunch = "SELECT food.food_name, meal.servings, meal.total_cal, meal.total_fat, meal.total_protein, meal.total_sugar FROM meal JOIN food ON meal.f_id = food.f_id WHERE u_id = '".$uid."' AND meal_type = 'Lunch' AND date = '".$newDate."';";
 
 	$resultLunch = mysqli_query($conn, $sqlLunch);
 	$resultLunchCheck = mysqli_num_rows($resultLunch);
 
+
+	//SQL query for getting dinner food details
 	$sqlDinner = "SELECT food.food_name, meal.servings, meal.total_cal, meal.total_fat, meal.total_protein, meal.total_sugar FROM meal JOIN food ON meal.f_id = food.f_id WHERE u_id = '".$uid."' AND meal_type = 'Dinner' AND date = '".$newDate."';";
 
 	$resultDinner = mysqli_query($conn, $sqlDinner);
 	$resultDinnerCheck = mysqli_num_rows($resultDinner);
 
+
+	//SQL query for getting snack food details
 	$sqlSnack = "SELECT food.food_name, meal.servings, meal.total_cal, meal.total_fat, meal.total_protein, meal.total_sugar FROM meal JOIN food ON meal.f_id = food.f_id WHERE u_id = '".$uid."' AND meal_type = 'Snack' AND date = '".$newDate."'";
 
 	$resultSnack = mysqli_query($conn, $sqlSnack);
 	$resultSnackCheck = mysqli_num_rows($resultSnack);
 
 
+
+	//SQL query for getting totals for calories, fat, protein and sugar intake
 	$sqlTotal = "SELECT SUM(total_cal) as totalCal, SUM(total_fat) as totalFat, SUM(total_protein) as totalProtein, SUM(total_sugar) as totalSugar FROM meal WHERE u_id = '".$uid."' AND date ='".$newDate."';";
 
 	$resultTotal = mysqli_query($conn, $sqlTotal);
@@ -58,7 +68,9 @@
 	</div>
 	<div>
 		<div id="diary-section">
-			<button>Previous Entries</button>
+			<form action="previous-entries.php">
+				<button>Previous Entries</button>
+			</form>
 		</div>
 		
 		<div id="food-search">
