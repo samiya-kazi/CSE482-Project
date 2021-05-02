@@ -76,7 +76,7 @@
 		<div id="food-search">
 			<form method="POST" action="search-food.php">
 				<label for="food-search">Search food:</label>
-			    <input class="form-input" type="text" id="food-search" name="food-search" placeholder="Search food...">
+			    <input class="form-input" type="text" id="food-search" name="food-search" placeholder="Search food..." required="">
 			    <button id="search-button" type="submit" value="Submit">Search</button>
 			</form>
 		</div>
