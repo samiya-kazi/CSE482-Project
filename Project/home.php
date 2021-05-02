@@ -1,11 +1,41 @@
 <?php
+	include_once 'includes/db.php';
 	session_start();
+
+	$uid = $_SESSION['uid'];
+	$date = $_SESSION['date'];
+	$newDate = date("Y-m-d", strtotime($date));
+
+	$sqlBreakfast = "SELECT food.food_name, meal.servings, meal.total_cal, meal.total_fat, meal.total_protein, meal.total_sugar FROM meal JOIN food ON meal.f_id = food.f_id WHERE u_id = '".$uid."' AND meal_type = 'Breakfast' AND date = '".$newDate."';";
+
+	$resultBreakfast = mysqli_query($conn, $sqlBreakfast);
+	$resultBreakfastCheck = mysqli_num_rows($resultBreakfast);
+
+	$sqlLunch = "SELECT food.food_name, meal.servings, meal.total_cal, meal.total_fat, meal.total_protein, meal.total_sugar FROM meal JOIN food ON meal.f_id = food.f_id WHERE u_id = '".$uid."' AND meal_type = 'Lunch' AND date = '".$newDate."';";
+
+	$resultLunch = mysqli_query($conn, $sqlLunch);
+	$resultLunchCheck = mysqli_num_rows($resultLunch);
+
+	$sqlDinner = "SELECT food.food_name, meal.servings, meal.total_cal, meal.total_fat, meal.total_protein, meal.total_sugar FROM meal JOIN food ON meal.f_id = food.f_id WHERE u_id = '".$uid."' AND meal_type = 'Dinner' AND date = '".$newDate."';";
+
+	$resultDinner = mysqli_query($conn, $sqlDinner);
+	$resultDinnerCheck = mysqli_num_rows($resultDinner);
+
+	$sqlSnack = "SELECT food.food_name, meal.servings, meal.total_cal, meal.total_fat, meal.total_protein, meal.total_sugar FROM meal JOIN food ON meal.f_id = food.f_id WHERE u_id = '".$uid."' AND meal_type = 'Snack' AND date = '".$newDate."'";
+
+	$resultSnack = mysqli_query($conn, $sqlSnack);
+	$resultSnackCheck = mysqli_num_rows($resultSnack);
+
+
+	$sqlTotal = "SELECT SUM(total_cal) as totalCal, SUM(total_fat) as totalFat, SUM(total_protein) as totalProtein, SUM(total_sugar) as totalSugar FROM meal WHERE u_id = '".$uid."' AND date ='".$newDate."';";
+
+	$resultTotal = mysqli_query($conn, $sqlTotal);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nutri-diary Home</title>
+	<title>Nutri-Diary Home</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -15,7 +45,7 @@
 				<li class="navitem"><a class="navlink" href="index.php">Logout</a></li>
 				<li class="navitem"><a class="navlink" href="home.php">Recipes</a></li>
 				<li class="navitem"><a class="navlink" href="home.php">Home</a></li>
-				<li class="navitem"  id="logo"><a class="navlink" href="home.php">Nutri-diary</a></li>
+				<li class="navitem"  id="logo"><a class="navlink" href="home.php">Nutri-Diary</a></li>
 			</ul>
 		</div>
 	</div>
@@ -51,138 +81,146 @@
 				<div class="meal">
 					<h4 class="meal-type">Breakfast</h4>
 					<table>
-						<tr>
-							<th>Food</th>
-							<th>Serving</th>
-							<th>Calories</th>
-							<th>Fat</th>
-							<th>Protein</th>
-							<th>Sugar</th>
-						</tr>
-						<tr>
-							<td>Toast</td>
-							<td>2 servings</td>
-							<td>150 kcal</td>
-							<td>2 grams</td>
-							<td>6.2 grams</td>
-							<td>3 grams</td>
-						</tr>
-						<tr>
-							<td>Orange Juice</td>
-							<td>1 servings</td>
-							<td>111 kcal</td>
-							<td>0.5 grams</td>
-							<td>1.7 grams</td>
-							<td>21 grams</td>
-						</tr>
+						<?php
+							if($resultBreakfastCheck > 0) {
+								echo "<tr>
+										<th>Food</th>
+										<th>Serving</th>
+										<th>Calories</th>
+										<th>Fat</th>
+										<th>Protein</th>
+										<th>Sugar</th>
+									</tr>";
+
+								while($row = mysqli_fetch_assoc($resultBreakfast)) {
+									echo "<tr>";
+									echo "<td>".$row['food_name']."</td>";
+									echo "<td>".$row['servings']." servings</td>";
+									echo "<td>".$row['total_cal']." kcal</td>";
+									echo "<td>".$row['total_fat']." g</td>";
+									echo "<td>".$row['total_protein']." g</td>";
+									echo "<td>".$row['total_sugar']." g</td>";
+									echo "</tr>";
+								}
+							} else {
+								echo "No entries to show.";
+							}
+						?>
 					</table>
 				</div>
 				<div class="meal">
 					<h4 class="meal-type">Lunch</h4>
 					<table>
-						<tr>
-							<th>Food</th>
-							<th>Serving</th>
-							<th>Calories</th>
-							<th>Fat</th>
-							<th>Protein</th>
-							<th>Sugar</th>
-						</tr>
-						<tr>
-							<td>Toast</td>
-							<td>2 servings</td>
-							<td>150 kcal</td>
-							<td>2 grams</td>
-							<td>6.2 grams</td>
-							<td>3 grams</td>
-						</tr>
-						<tr>
-							<td>Orange Juice</td>
-							<td>1 servings</td>
-							<td>111 kcal</td>
-							<td>0.5 grams</td>
-							<td>1.7 grams</td>
-							<td>21 grams</td>
-						</tr>
+						<?php
+							if($resultLunchCheck > 0) {
+								echo "<tr>
+										<th>Food</th>
+										<th>Serving</th>
+										<th>Calories</th>
+										<th>Fat</th>
+										<th>Protein</th>
+										<th>Sugar</th>
+									</tr>";
+
+								while($row = mysqli_fetch_assoc($resultLunch)) {
+									echo "<tr>";
+									echo "<td>".$row['food_name']."</td>";
+									echo "<td>".$row['servings']." servings</td>";
+									echo "<td>".$row['total_cal']." kcal</td>";
+									echo "<td>".$row['total_fat']." g</td>";
+									echo "<td>".$row['total_protein']." g</td>";
+									echo "<td>".$row['total_sugar']." g</td>";
+									echo "</tr>";
+								}
+							} else {
+								echo "No entries to show.";
+							}
+						?>
 					</table>
 				</div>
 				<div class="meal">
 					<h4 class="meal-type">Dinner</h4>
 					<table>
-						<tr>
-							<th>Food</th>
-							<th>Serving</th>
-							<th>Calories</th>
-							<th>Fat</th>
-							<th>Protein</th>
-							<th>Sugar</th>
-						</tr>
-						<tr>
-							<td>Toast</td>
-							<td>2 servings</td>
-							<td>150 kcal</td>
-							<td>2 grams</td>
-							<td>6.2 grams</td>
-							<td>3 grams</td>
-						</tr>
-						<tr>
-							<td>Orange Juice</td>
-							<td>1 servings</td>
-							<td>111 kcal</td>
-							<td>0.5 grams</td>
-							<td>1.7 grams</td>
-							<td>21 grams</td>
-						</tr>
+						<?php
+							if($resultDinnerCheck > 0) {
+								echo "<tr>
+										<th>Food</th>
+										<th>Serving</th>
+										<th>Calories</th>
+										<th>Fat</th>
+										<th>Protein</th>
+										<th>Sugar</th>
+									</tr>";
+
+								while($row = mysqli_fetch_assoc($resultDinner)) {
+									echo "<tr>";
+									echo "<td>".$row['food_name']."</td>";
+									echo "<td>".$row['servings']." servings</td>";
+									echo "<td>".$row['total_cal']." kcal</td>";
+									echo "<td>".$row['total_fat']." g</td>";
+									echo "<td>".$row['total_protein']." g</td>";
+									echo "<td>".$row['total_sugar']." g</td>";
+									echo "</tr>";
+								}
+							} else {
+								echo "No entries to show.";
+							}
+						?>
 					</table>
 				</div>
 				<div class="meal">
 					<h4 class="meal-type">Snack</h4>
 					<table>
-						<tr>
-							<th>Food</th>
-							<th>Serving</th>
-							<th>Calories</th>
-							<th>Fat</th>
-							<th>Protein</th>
-							<th>Sugar</th>
-						</tr>
-						<tr>
-							<td>Toast</td>
-							<td>2 servings</td>
-							<td>150 kcal</td>
-							<td>2 grams</td>
-							<td>6.2 grams</td>
-							<td>3 grams</td>
-						</tr>
-						<tr>
-							<td>Orange Juice</td>
-							<td>1 servings</td>
-							<td>111 kcal</td>
-							<td>0.5 grams</td>
-							<td>1.7 grams</td>
-							<td>21 grams</td>
-						</tr>
+						<?php
+							if($resultSnackCheck > 0) {
+								echo "<tr>
+										<th>Food</th>
+										<th>Serving</th>
+										<th>Calories</th>
+										<th>Fat</th>
+										<th>Protein</th>
+										<th>Sugar</th>
+									</tr>";
+
+								while($row = mysqli_fetch_assoc($resultSnack)) {
+									echo "<tr>";
+									echo "<td>".$row['food_name']."</td>";
+									echo "<td>".$row['servings']." servings</td>";
+									echo "<td>".$row['total_cal']." kcal</td>";
+									echo "<td>".$row['total_fat']." g</td>";
+									echo "<td>".$row['total_protein']." g</td>";
+									echo "<td>".$row['total_sugar']." g</td>";
+									echo "</tr>";
+								}
+							} else {
+								echo "No entries to show.";
+							}
+						?>
 					</table>
 				</div>
 				<div class="meal">
 					<h4 class="meal-type" >Total</h4>
 					<table>
-						<tr>
-							<th></th>
-							<th></th>
-							<th>Calories</th>
-							<th>Fat</th>
-							<th>Protein</th>
-							<th>Sugar</th>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td>150 kcal</td>
-							<td>2 grams</td>
-							<td>6.2 grams</td>
-							<td>3 grams</td>
-						</tr>
+						<?php
+							echo "<tr>
+								<th></th>
+								<th></th>
+								<th>Calories</th>
+								<th>Fat</th>
+								<th>Protein</th>
+								<th>Sugar</th>
+							</tr>";
+
+							$total = mysqli_fetch_assoc($resultTotal);
+
+							echo "<tr>";
+							echo "<td></td>";
+							echo "<td></td>";
+							echo "<td>".$total['totalCal']." kcal</td>";
+							echo "<td>".$total['totalFat']." g</td>";
+							echo "<td>".$total['totalProtein']." g</td>";
+							echo "<td>".$total['totalSugar']." g</td>";
+						?>
 					</table>
 				</div>
 			</div>

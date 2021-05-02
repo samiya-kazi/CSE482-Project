@@ -45,6 +45,7 @@ body {
 .site-info {
 	display: inline-block;
 	width: 40%;
+	height: 100%;
 	margin: 0% 4%;
 	align-items: center;
 }
@@ -52,6 +53,7 @@ body {
 .login-section {
 	display: inline-block;
 	width: 40%;
+	height: 100%;
 	margin: 0% 4%;
 }
 
@@ -68,10 +70,10 @@ body {
 	box-sizing: border-box;
 }
 
-.login-form {
+.mini-form {
 	border-radius: 5px;
   	background-color: #cce0df;
-  	padding: 10px;
+  	padding: 30px;
   	margin: 0%, 10%;
 }
 
@@ -103,7 +105,7 @@ button {
 	text-align: center;
 }
 
-#journal-section {
+#diary-section {
 	display: inline-block;
 	width: 40%;
 	margin: 0 4% 0 5%;
@@ -140,4 +142,28 @@ th, tr, td {
 	text-align: center;
 	width: 150px;
 	padding: 5px;
+}
+
+.search-results {
+	display: inline-block;
+	width: 40%;
+	padding: 0 5%;
+	overflow: auto;
+}
+
+.food-submit {
+	display: inline-block;
+	width: 35%;
+	padding: 5%;
+}
+
+.card {
+ 	background-color: #fff;
+ 	border: 1px solid black;
+ 	border-radius: 10px;
+ 	position: relative;
+}
+
+.card:hover {
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }

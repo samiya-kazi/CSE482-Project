@@ -7,7 +7,6 @@
 
 		$sql = "SELECT * FROM users WHERE email = '".$email."' AND password = '".$password."' LIMIT 1;";
 
-
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
 
@@ -51,7 +50,7 @@
 			<h4>Track your calories and macro nutrients to reach your health goals!</h4>
 		</div>
 		<div class="login-section">
-			<div class="login-form">
+			<div class="mini-form">
 				<form method="POST" action="#">
 					<h3>Login Here</h3>
 					<label for="email">E-mail:</label>
