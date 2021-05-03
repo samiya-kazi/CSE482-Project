@@ -4,7 +4,12 @@
 
 	$uid = $_SESSION['uid'];
 	$date = $_SESSION['date'];
+
+	//Convert date to format that matches MySQL server (YYYY-dd-mm)
 	$newDate = date("Y-m-d", strtotime($date));
+
+	//Set day of week
+	$dayOfWeek = date("l", strtotime(date("m-d-Y", strtotime($date))));
 
 
 	//SQL query for getting breakfast food details
@@ -85,7 +90,7 @@
 			<div class="entry-date"><h2>Today's Entry</h2>
 				<h3>
 					<?php
-						echo "Date: ".$_SESSION["date"]."";
+						echo "Date: ".$_SESSION["date"]." (".$dayOfWeek.")";
 					?>
 				</h3>
 			</div>

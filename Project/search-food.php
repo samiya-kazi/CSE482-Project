@@ -73,7 +73,6 @@
 						<option value="Dinner">Snack</option>
 					</select>
 					<br>
-
 					<button type="submit" value="Submit" onclick="validateForm()">Submit</button>
 				</div>
 			</div>

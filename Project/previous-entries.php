@@ -12,6 +12,7 @@
 
 		//Covert date to format that is easier for the user to read (dd/mm/YYYY)
 		$newDate = date("d/m/Y", strtotime($date));
+		$dayOfWeek = date("l", strtotime($date));
 
 
 		//SQL query for getting breakfast food details
@@ -90,15 +91,15 @@
 
 		<div class="entry">
 			<div class="entry-date">
-				<h3>
+				<h2>
 					<?php
 						if(isset($_POST['date-search'])){
-							echo "Entry of: ".$newDate;
+							echo "Entry of: ".$newDate." (".$dayOfWeek.")";
 						} else {
 							echo "Please pick a date.";
 						}
 					?>
-				</h3>
+				</h2>
 			</div>
 
 
