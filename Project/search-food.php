@@ -66,7 +66,7 @@
 			    	<input class="form-input" type="number" id="num-servings" name="num-servings">
 
 			    	<label for="meal-type" class="form-label">Meal-type:</label>
-					<select name="meal-type" id="meal-type">
+					<select class="form-select" name="meal-type" id="meal-type">
 						<option value="Breakfast">Breakfast</option>
 						<option value="Lunch">Lunch</option>
 						<option value="Dinner">Dinner</option>

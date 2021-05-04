@@ -89,6 +89,14 @@ body {
 	text-align: center;
 }
 
+.form-select {
+	padding: 12px 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+
+}
+
 .register-link {
 	text-align: center;
 	margin-top: 30px;
@@ -272,4 +280,38 @@ ol>li {
 	border-radius: 30px;
 	height: 15px;
 	margin-bottom: 15px;
+}
+
+.goal-main {
+	display: flex;
+}
+
+.user-info {
+	flex: 0 0 45%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.edit-info {
+	flex: 0 0 45%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.info-display {
+	border: 1px solid black;
+	border-radius: 30px;
+	margin: 30px;
+	padding: 30px;
+
+}
+
+.info-display > h2 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.info-display > div {
+	margin-bottom: 10px;
 }

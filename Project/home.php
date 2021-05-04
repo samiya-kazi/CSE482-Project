@@ -110,7 +110,7 @@
 					}
 				?>
 			</div>
-			<a href='#'>Edit goals</a>
+			<a href='user-goal.php'>Edit goals</a>
 		</div>
 
 		<div class="entry">

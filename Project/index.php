@@ -14,12 +14,14 @@
 			$resultRow = mysqli_fetch_assoc($result);
 			$uid = $resultRow['id'];
 			$name = $resultRow['name'];
+			$gender = $resultRow['gender'];
 			$date = date("d/m/y");
 
 			session_start();
 			$_SESSION['uid'] = $uid;
 			$_SESSION['name'] = $name;
 			$_SESSION['date'] = $date;
+			$_SESSION['gender'] = $gender;
 	
 			header("Location:home.php");
 		}
