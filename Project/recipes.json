@@ -1,0 +1,26 @@
+{
+	"recipe1": {
+		"name": "Keto Fried Chicken",
+		"servings": "6 - 8 servings",
+		"time": "1 hour 15 minutes",
+		"ingredients": ["6 bone-in, skin-on chicken breasts (about 4lbs.)", "Kosher salt", "Freshly ground black pepper", " 2 large eggs", "1/2 cup heavy cream", "3/4 cup almond flour", "1/2 cup freshly grated Parmesan cheese", "1 tsp. garlic powder", "1/2 tsp. paprika"],
+		"steps": ["Preheat oven to 400° and line a large baking sheet with parchment paper. Pat chicken dry with paper towels and season with salt and pepper.",
+			"In a shallow bowl whisk together eggs and heavy cream. In another shallow bowl, combine almond flour, Parmesan, garlic powder, and paprika. Season with salt and pepper.",
+			"Working one at a time, dip chicken in egg mixture and then in almond flour mixture, pressing to coat. Place chicken on prepared baking sheet.",
+			"Bake until chicken is golden and internal temperature reaches 165°, about 45 minutes.",
+			"Meanwhile, make dipping sauce: In a medium bowl, combine mayonnaise and hot sauce. Add more hot sauce depending on preferred spiciness level.",
+			"Serve chicken warm with dipping sauce."],
+		"image_url": "images/keto-fried-chicken.jpg"
+	},
+	"recipe2": {
+		"name": "Keto Chicken Soup",
+		"servings": "4 - 6 servings",
+		"time": "1 hour 30 minutes",
+		"ingredients": ["2 tbsp. vegetable oil", "1 medium onion, chopped", "5 cloves garlic, smashed", "2 in. piece fresh ginger, sliced", "1 small cauliflower, cut into florets", "3/4 tsp. crushed red pepper flakes", "1 medium carrot", "6 cups chicken broth", "2 boneless skinless chicken breasts"],
+		"steps": ["In a large pot over medium heat, heat oil. Add onion, garlic and ginger. Cook until beginning to brown.",
+			"Meanwhile, pulse cauliflower in a food processor until broken down into rice-sized granules. Add cauliflower to pot with onion mixture and cook over medium high heat until beginning to brown, about 8 minutes.",
+			"Add pepper flakes, carrots, and chicken broth and bring to a simmer. Add chicken breasts and let cook gently until they reach an internal temperature of 165°, about 15 minutes. Remove from pan, let cool until cool enough to handle, and shred. Meanwhile, continue simmering until vegetables are tender, 3 to 5 minutes more.",
+			"Remove ginger from pot, and add shredded chicken back to soup. Season to taste with salt and pepper, then garnish with parsley before serving."],
+		"image_url": "images/keto-chicken-soup.jpg"
+	}
+}
