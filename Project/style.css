@@ -221,8 +221,16 @@ th, tr, td {
 	flex: 0 0 300px;
 }
 
+#recipe-intro {
+	text-align: center;
+	padding: 0 100px;
+}
 
-#recipe-name {
+.intro-pic {
+	height: 300px;
+}
+
+.recipe-name {
 	padding: 10px;
 	border-bottom: 2px solid black;
 }
@@ -240,4 +248,28 @@ ol>li {
 
 .details {
 	margin-top: 10px;
+}
+
+
+.progess-bar-section {
+	padding: 20px;
+	text-align: center;
+}
+
+#progress-bar {
+	border: 1px solid black;
+	height: 15px;
+	border-radius: 30px;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+
+#progress {
+	background-color: #1b9aa1;
+	border-radius: 30px;
+	height: 15px;
+	margin-bottom: 15px;
 }

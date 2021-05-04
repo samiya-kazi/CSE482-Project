@@ -24,6 +24,11 @@
 
 		<div class="recipe-details-section">
 			<div class="recipe-details">
+				<div id="recipe-intro">
+					<h2>Take a gander at our recipes!</h2>
+					<img src="images/table-food.jpg" class="intro-pic">
+					<p>Need some inspiration for your health endevours? Try our assortment of delicous and nutrious recipes. From keto to vegetarian options, you're bound to find something to nourish yourself and your family.</p>
+				</div>
 				<h3 id="recipe-name"></h3>
 				<div id="top-details">
 					<div>
@@ -49,8 +54,12 @@
 			if(this.status == 200) {
 				let recipesJSON = JSON.parse(this.responseText);
 
+				//Clear out what is being displayed in the intro 
+				document.getElementById('recipe-intro').innerHTML = "";
+
 				//Display recipe name, number of servings and timing
 				document.getElementById('recipe-name').innerHTML = recipesJSON[recipe_num]['name']
+				document.getElementById('recipe-name').setAttribute("class", "recipe-name")
 				document.getElementById('servings').innerHTML = recipesJSON[recipe_num]['servings']
 				document.getElementById('timing').innerHTML = "Timing: " + recipesJSON[recipe_num]['time']
 

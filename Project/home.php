@@ -45,6 +45,13 @@
 	$sqlTotal = "SELECT SUM(total_cal) as totalCal, SUM(total_fat) as totalFat, SUM(total_protein) as totalProtein, SUM(total_sugar) as totalSugar FROM meal WHERE u_id = '".$uid."' AND date ='".$newDate."';";
 
 	$resultTotal = mysqli_query($conn, $sqlTotal);
+	$total = mysqli_fetch_assoc($resultTotal);
+
+
+	//Check if user has diet information submitted
+	$sqlInfo = "SELECT * FROM user_info WHERE u_id =".$uid.";";
+	$resultInfo = mysqli_query($conn, $sqlInfo);
+	$resultInfoCheck = mysqli_num_rows($resultInfo);
 ?>
 
 <!DOCTYPE html>
@@ -84,6 +91,26 @@
 			    <input class="form-input" type="text" id="food-search" name="food-search" placeholder="Search food..." required="">
 			    <button id="search-button" type="submit" value="Submit">Search</button>
 			</form>
+		</div>
+		<div class="progess-bar-section">
+			<h4>Daily Progress</h4>
+			<div id="progress-bar">
+				<?php
+					if($resultInfoCheck > 0) {
+						$userInfo = mysqli_fetch_assoc($resultInfo);
+						$basalCal = $userInfo['basal_cal'];
+						$totalCal = $total['totalCal'];
+
+						$progress = ($totalCal * 100) / $basalCal;
+
+						echo "<div id='progress' style='width:".$progress."%'>".floor($progress)."%</div>";
+					} else {
+						echo "<div id='progress' style='width:0%;'></div>";
+						echo "Enter your diet goals to see your progress.<br>";
+					}
+				?>
+			</div>
+			<a href='#'>Edit goals</a>
 		</div>
 
 		<div class="entry">
@@ -227,8 +254,6 @@
 								<th>Protein</th>
 								<th>Sugar</th>
 							</tr>";
-
-							$total = mysqli_fetch_assoc($resultTotal);
 
 							if($total['totalCal'] != null) {
 								echo "<tr>";
