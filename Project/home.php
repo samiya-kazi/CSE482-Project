@@ -230,13 +230,23 @@
 
 							$total = mysqli_fetch_assoc($resultTotal);
 
-							echo "<tr>";
-							echo "<td></td>";
-							echo "<td></td>";
-							echo "<td>".$total['totalCal']." kcal</td>";
-							echo "<td>".$total['totalFat']." g</td>";
-							echo "<td>".$total['totalProtein']." g</td>";
-							echo "<td>".$total['totalSugar']." g</td>";
+							if($total['totalCal'] != null) {
+								echo "<tr>";
+								echo "<td></td>";
+								echo "<td></td>";
+								echo "<td>".$total['totalCal']." kcal</td>";
+								echo "<td>".$total['totalFat']." g</td>";
+								echo "<td>".$total['totalProtein']." g</td>";
+								echo "<td>".$total['totalSugar']." g</td>";
+							} else {
+								echo "<tr>";
+								echo "<td></td>";
+								echo "<td></td>";
+								echo "<td>0 kcal</td>";
+								echo "<td>0 g</td>";
+								echo "<td>0 g</td>";
+								echo "<td>0 g</td>";
+							}
 						?>
 					</table>
 				</div>
