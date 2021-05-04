@@ -65,9 +65,9 @@
 		<div class="navbar-links">
 			<ul class="nav-link-list">
 				<li class="navitem"><a class="navlink" href="index.php">Logout</a></li>
-				<li class="navitem"><a class="navlink" href="home.php">Recipes</a></li>
+				<li class="navitem"><a class="navlink" href="recipes.php">Recipes</a></li>
 				<li class="navitem"><a class="navlink" href="home.php">Home</a></li>
-				<li class="navitem"  id="logo"><a class="navlink" href="home.php">Nutri-Diary</a></li>
+				<li class="navlogo"><a class="navlink" href="home.php"><img src="images/logo.png"></a></li>
 			</ul>
 		</div>
 	</div>

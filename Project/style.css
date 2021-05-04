@@ -22,6 +22,14 @@ body {
 	padding: 20px 25px;
 }
 
+.navlogo {
+	float: left;
+}
+
+.nav-link-list {
+	list-style: none;
+}
+
 .navlink {
 	text-decoration: none;
 	color: white;
@@ -157,13 +165,64 @@ th, tr, td {
 	padding: 5%;
 }
 
-.card {
- 	background-color: #fff;
- 	border: 1px solid black;
- 	border-radius: 10px;
- 	position: relative;
+.recipe-main {
+	display: flex;
 }
 
-.card:hover {
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+.recipe-list {
+	flex: 0 0 300px;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.recipe-details-section {
+	flex-grow: 3;
+	padding: 20px;
+}
+
+.recipe-details {
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 20px;
+	margin-right: 20px;
+}
+
+.recipe-button {
+	color: #1b5740;
+	background-color: white;
+	border: 1px solid #1b5740;
+	border-radius: 10px;
+}
+
+.recipe-button:hover {
+	box-shadow: 5px 5px 15px #888888;
+}
+
+#top-details {
+	display: flex;
+}
+
+#recipe-pic-section {
+	flex: 0 0 300px;
+}
+
+
+#recipe-name {
+	padding: 10px;
+	border-bottom: 2px solid black;
+}
+
+#recipe-pic {
+	max-height: 300px;
+	max-width: 400px;
+	margin: 50px 20px 20px 100px;
+	border-radius: 15px;
+}
+
+ol>li {
+	padding: 10px;
+}
+
+.details {
+	margin-top: 10px;
 }
