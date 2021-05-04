@@ -42,7 +42,7 @@
 	</div>
 	<div class="register-form">
 		<form name="registration-form" method="POST" action="register-status.php">
-			<h1>Registration</h1>
+			<h1 class="form-title">Registration</h1>
 
 			<label for="name" class="form-label">Name:</label>
 			<input class="form-input" type="text" id="name" name="name" onkeyup="validateName()">
@@ -64,11 +64,11 @@
 			<p class="alert" id="confirm-password-alert"></p>
 
 			<label class="form-label">Gender: </label>
-			<input type="radio" id="male" name="gender" value="male">
+			<input type="radio" id="male" name="gender" value="male" required="required">
 			<label for="male">Male</label>
-			<input type="radio" id="female" name="gender" value="female">
+			<input type="radio" id="female" name="gender" value="female" required="required">
 			<label for="female">Female</label>
-			<input type="radio" id="other" name="gender" value="other">
+			<input type="radio" id="other" name="gender" value="other" required="required">
 			<label for="other">Other</label>
 			<br>
 

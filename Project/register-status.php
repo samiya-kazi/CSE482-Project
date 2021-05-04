@@ -42,13 +42,18 @@
 		</div>
 	</div>
 	<div>
-		<?php
-			if($result == '1') {
-				echo "Registration successful. Please try logging in.";
-			} else {
-				echo "The email you have entered is already in use.";
-			}
-		?>
+		<div class="register-status">
+			<?php
+				if($result == '1') {
+					echo "Registration successful. Please try logging in.<br>";
+					echo "<button href='index.php'>Login</button>";
+				} else {
+					echo "The email you have entered is already in use.<br>";
+					echo "Please use another e-mail to register.<br>";
+					echo "<button href='register.php'>Register</button>";
+				}
+			?>
+		</div>
 	</div>
 </body>
 </html>

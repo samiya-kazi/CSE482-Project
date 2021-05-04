@@ -45,24 +45,24 @@ body {
 
 .main {
 	margin-top: 10px;
-	display: block;
+	display: flex;
 	height: auto;
 	width: auto;
 }
 
+.site-info-section {
+	flex: 0 0 45%;
+	text-align: center;
+}
+
 .site-info {
-	display: inline-block;
-	width: 40%;
-	height: 100%;
-	margin: 0% 4%;
-	align-items: center;
+	margin: 0 0 0 10%;
 }
 
 .login-section {
-	display: inline-block;
-	width: 40%;
-	height: 100%;
-	margin: 0% 4%;
+	flex: 0 0 40%;
+	margin: 30px 0 0 100px;
+	padding: 20px 50px;
 }
 
 #landing-image {
@@ -80,9 +80,18 @@ body {
 
 .mini-form {
 	border-radius: 5px;
-  	background-color: #cce0df;
-  	padding: 30px;
-  	margin: 0%, 10%;
+	background-color: #cce0df;
+	padding: 30px;
+	margin: 0% 10% 0% 10%
+}
+
+.form-title {
+	text-align: center;
+}
+
+.register-link {
+	text-align: center;
+	margin-top: 30px;
 }
 
 .register-form {
@@ -107,6 +116,12 @@ button {
 
 .alert {
 	color: red;
+}
+
+.register-status {
+	text-align: center;
+	margin-top: 100px;
+	font-size: 150%;
 }
 
 #welcome, #previous-entries {

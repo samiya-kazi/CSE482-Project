@@ -44,15 +44,17 @@
 	</div>
 
 	<div class="main">
-		<div class="site-info">
-			<h1>Welcome to Nutri-Diary!</h1>
-			<img id="landing-image" src="images/healthy-woman.png">
-			<h4>Track your calories and macro nutrients to reach your health goals!</h4>
+		<div class="site-info-section">
+			<div class="site-info">
+				<h1>Welcome to Nutri-Diary!</h1>
+				<img id="landing-image" src="images/healthy-woman.png">
+				<h4>Track your calories and macro nutrients to reach your health goals!</h4>
+			</div>
 		</div>
 		<div class="login-section">
 			<div class="mini-form">
 				<form method="POST" action="#">
-					<h3>Login Here</h3>
+					<h2 class="form-title">Login</h2>
 					<label for="email">E-mail:</label>
 			    	<input class="form-input" type="email" id="email" name="email" placeholder="E-mail">
 
@@ -71,7 +73,7 @@
 
 			    	<button type="submit" value="Submit">Login</button>
 				</form>
-				<p>Don't have an account? Register <a href="register.php">here.</a></p>
+				<p class="register-link">Don't have an account? Register <a href="register.php">here.</a></p>
 			</div>
 		</div>
 	</div>
