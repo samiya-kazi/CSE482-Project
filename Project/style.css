@@ -266,7 +266,7 @@ ol>li {
 
 #progress-bar {
 	border: 1px solid black;
-	height: 15px;
+	height: 20px;
 	border-radius: 30px;
 	width: 500px;
 	margin-left: auto;
@@ -276,10 +276,14 @@ ol>li {
 }
 
 #progress {
-	background-color: #1b9aa1;
+	background-color: #22c1c9;
 	border-radius: 30px;
-	height: 15px;
+	height: 20px;
 	margin-bottom: 15px;
+}
+
+#progress-percent {
+	margin-left: 10px;
 }
 
 .goal-main {

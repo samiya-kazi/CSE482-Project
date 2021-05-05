@@ -102,9 +102,10 @@
 						$basalCal = $userInfo['basal_cal'];
 						$totalCal = $total['totalCal'];
 
-						$progress = ($totalCal * 100) / $basalCal;
+						$progress = floor(($totalCal * 100) / $basalCal);
 
-						echo "<div id='progress' style='width:".$progress."%'>".floor($progress)."%</div>";
+						echo "<div id='progress' style='width:".$progress."%'>";
+						echo "<div id='progress-percent'>".$progress."%</div></div>";
 					} else {
 						echo "<div id='progress' style='width:0%;'></div>";
 						echo "Enter your diet goals to see your progress.<br>";
