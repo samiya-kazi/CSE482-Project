@@ -22,5 +22,18 @@
 			"Add pepper flakes, carrots, and chicken broth and bring to a simmer. Add chicken breasts and let cook gently until they reach an internal temperature of 165°, about 15 minutes. Remove from pan, let cool until cool enough to handle, and shred. Meanwhile, continue simmering until vegetables are tender, 3 to 5 minutes more.",
 			"Remove ginger from pot, and add shredded chicken back to soup. Season to taste with salt and pepper, then garnish with parsley before serving."],
 		"image_url": "images/keto-chicken-soup.jpg"
+	},
+	"recipe3": {
+		"name": "Keto Chocolate Cake",
+		"servings": "12 servings",
+		"time": "1 hour 45 minutes",
+		"ingredients": ["1 1/2 cup almond flour", "2/3 cup unsweetened cocoa powder", "3/4 cup coconut flour", "1/4 cup flaxseed meal", "2 tsp. baking powder", "2 tsp. baking soda", "1 tsp. salt", "1/2 cup butter", "3/4 cup sugar", "4 large eggs", "1 tsp. pure vanilla extract", "1 cup almond milk", "1/3 cup brewed coffee"],
+		"steps": ["Preheat oven to 350° and line two 8” pans with parchment and grease with cooking spray. In a large bowl, whisk together almond flour, cocoa powder, coconut flour, flaxseed meal, baking powder, baking soda, and salt.",
+			"In another large bowl, using a hand mixer, beat butter and Swerve together until light and fluffy. Add eggs, one at at time, then add vanilla. Add dry ingredients and mix until just combined then stir in milk and coffee.",
+			"Divide batter between prepared pans and bake until a toothpick inserted into the middle comes out clean, 28 minutes. Let cool completely.",
+			"Make frosting: In a large bowl, with a hand mixer, beat cream cheese and butter together until smooth. Add Swerve, cocoa powder, coconut flour, and instant coffee and beat until no lumps remain. Add cream and a pinch of salt and beat until combined.",
+			"Place one cake layer on serving platter or cake stand then spread a thick layer of buttercream on top. Repeat with remaining layers then frost sides of cake.",
+			"Keep refrigerated until ready to serve."],
+		"image_url": "images/keto-chocolate-cake.jpg"
 	}
 }
