@@ -2,6 +2,10 @@
 	include_once 'includes/db.php';
 	session_start();
 
+	if(!isset($_SESSION['uid'])) {
+		header("Location:index.php");
+	}
+
 	$uid = $_SESSION['uid'];
 	$name = $_SESSION['name'];
 	$gender = $_SESSION['gender'];
@@ -35,7 +39,7 @@
 	<div class="goal-main">
 		<div class="user-info">
 			<div class="info-display">
-				<h2>User Info</h2>
+				<h2>User Information</h2>
 
 				<?php
 					if($resultInfoCheck == 1) {
@@ -61,6 +65,8 @@
 		<div class="edit-info">
 			<div class="mini-form">
 				<form method="POST" action="update-info.php">
+					<h2 class="form-title">Update Information</h2>
+
 					<label for="age">Age:</label>
 			    	<input class="form-input" type="number" id="age" name="age" required="required">
 

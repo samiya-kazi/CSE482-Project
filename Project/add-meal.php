@@ -2,6 +2,10 @@
 	include_once 'includes/db.php';
 	session_start();
 
+	if(!isset($_SESSION['uid'])) {
+		header("Location:index.php");
+	}
+
 	$userID = $_SESSION['uid'];
 	$date = $_SESSION['date'];
 	$newDate = date("Y-m-d", strtotime($date));

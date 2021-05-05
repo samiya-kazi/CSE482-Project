@@ -2,6 +2,10 @@
 	include_once('includes/db.php');
 	session_start();
 
+	if(!isset($_SESSION['uid'])) {
+		header("Location:index.php");
+	}
+
 	$uid = $_SESSION['uid'];
 
 	if(isset($_POST['date-search'])) {
