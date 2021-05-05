@@ -8,8 +8,9 @@
 	<div class="navbar">
 		<div class="navbar-links">
 			<ul class="nav-link-list">
-				<li class="navitem"><a class="navlink" href="index.php">Logout</a></li>
+				<li class="navitem"><a class="navlink" href="logout.php">Logout</a></li>
 				<li class="navitem"><a class="navlink" href="recipes.php">Recipes</a></li>
+				<li class="navitem"><a class="navlink" href="previous-entries.php">Diary</a></li>
 				<li class="navitem"><a class="navlink" href="home.php">Home</a></li>
 				<li class="navlogo"><a class="navlink" href="home.php"><img src="images/logo.png"></a></li>
 			</ul>
@@ -20,6 +21,7 @@
 			<h4>Keto recipes:</h4>
 			<button class="recipe-button" onclick="getRecipe('recipe1')">Keto Fried Chicken</button>
 			<button class="recipe-button" onclick="getRecipe('recipe2')">Keto Chicken Soup</button>
+			<button class="recipe-button" onclick="getRecipe('recipe3')">Keto Chocolate Cake</button>
 		</div>
 
 		<div class="recipe-details-section">
