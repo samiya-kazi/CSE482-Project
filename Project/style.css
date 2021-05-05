@@ -312,10 +312,12 @@ ol>li {
 }
 
 .info-display > h2 {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
 	text-align: center;
+	border-bottom: 1px solid grey;
 }
 
 .info-display > div {
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
