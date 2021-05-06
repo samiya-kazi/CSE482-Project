@@ -34,7 +34,7 @@
 			"Make frosting: In a large bowl, with a hand mixer, beat cream cheese and butter together until smooth. Add Swerve, cocoa powder, coconut flour, and instant coffee and beat until no lumps remain. Add cream and a pinch of salt and beat until combined.",
 			"Place one cake layer on serving platter or cake stand then spread a thick layer of buttercream on top. Repeat with remaining layers then frost sides of cake.",
 			"Keep refrigerated until ready to serve."],
-		"image_url": "images/keto-chocolate-cake.jpg"
+		"image_url": "images/keto-chocolate-cake.png"
 	},
 	"recipe4": {
 		"name": "Low Fat Chicken Biryani",
@@ -46,7 +46,7 @@
 				"When the chicken has marinated, thinly slice the reserved onion. Heat 1 tbsp oil in a large sauté or frying pan. Fry the onion for 4-5 mins until golden. Stir in the chicken, a spoonful at a time, frying until it is no longer opaque, before adding the next spoonful (this helps to prevent the yogurt from curdling). Once the last of the chicken has been added, stir-fry for a further 5 mins until everything looks juicy. Scrape any sticky bits off the bottom of the pan, stir in the chilli powder, then pour in 100ml water, cover and simmer on a low heat for 15 mins. Remove and set aside.",
 				"Cook the rice while the chicken simmers. Heat another 1 tbsp oil in a large sauté pan, then drop in the cinnamon stick, cardamom, cloves and cumin seeds. Fry briefly until their aroma is released. Tip in the rice (step 3) and fry for 1 min, stirring constantly. Stir in the stock and bring to the boil. Lower the heat and simmer, covered, for about 8 mins or until all the stock has been absorbed. Remove from the heat and leave with the lid on for a few mins, so the rice can fluff up. Stir the garam masala into the remaining 1½ tsp oil and set aside. When the onions are roasted, remove and reduce oven to 180C.",
 				"Spoon half the chicken and its juices into an ovenproof dish, about 25 x 18 x 6cm, then scatter over a third of the roasted onions. Remove the whole spices from the rice, then layer half of the rice over the chicken and onions. Drizzle over the spiced oil. Spoon over the rest of the chicken and a third more onions. Top with the remaining rice (step 4) and drizzle over the saffron-infused milk. Scatter over the rest of the onions, cover tightly with foil and heat through in the oven for about 25 mins. Serve scattered with the mint and coriander."],
-		"image_url": "images/low-fat-chicken-biryani.jpg"
+		"image_url": "images/low-fat-chicken-biryani.png"
 	},
 	"recipe5": {
 		"name": "Low Calorie Pancakes",
@@ -56,7 +56,7 @@
 		"steps": ["Sift the flours into a bowl or wide jug and tip any bits in the sieve back into the bowl. Add the egg yolks and a splash of milk then stir to a thick paste. Add the remaining milk a little at a time so you don’t make lumps in the batter.",
 			"Whisk the egg whites until they stand up in stiff peaks, then fold them carefully into the batter – try not to squash out all the air.",
 			"Heat a non-stick pan over a medium heat and pour in enough batter to make a pancake about 10 cm across. Cook for just under a minute until bubbles begin to pop on the surface and the edges are looking a little dry. Carefully turn the pancake over. If it is a bit wet on top, it may squirt out a little batter as you do so. In that case, leave it on the other side a little longer. Keep warm while you make the remaining pancakes. Serve with your favourite healthy toppings."],
-		"image_url": "images/low-calorie-pancake.jpg"
+		"image_url": "images/low-calorie-pancake.png"
 	},
 	"recipe6": {
 		"name": "Vegan Banana Bread",
@@ -68,6 +68,6 @@
 			"Bake in an oiled, lined 2lb loaf tin for 20 minutes. Check and cover with foil if the cake is browning.",
 			"Bake for another 20 minutes, or until a skewer comes out clean.",
 			"Allow to cool a little before slicing. It's delicious freshly baked, but develops a lovely gooey quality the day after."],
-		"image_url": "images/vegan-banana-bread.jpg"
+		"image_url": "images/vegan-banana-bread.png"
 	}
 }
