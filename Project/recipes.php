@@ -30,6 +30,13 @@
 			<button class="recipe-button" onclick="getRecipe('recipe1')">Keto Fried Chicken</button>
 			<button class="recipe-button" onclick="getRecipe('recipe2')">Keto Chicken Soup</button>
 			<button class="recipe-button" onclick="getRecipe('recipe3')">Keto Chocolate Cake</button>
+
+			<h4>Low calorie recipes:</h4>
+			<button class="recipe-button" onclick="getRecipe('recipe4')">Low Fat Chicken Biryani</button>
+			<button class="recipe-button" onclick="getRecipe('recipe5')">Low Calorie Pancakes</button>
+
+			<h4>Vegan recipes:</h4>
+			<button class="recipe-button" onclick="getRecipe('recipe6')">Vegan Banana Bread</button>
 		</div>
 
 		<div class="recipe-details-section">

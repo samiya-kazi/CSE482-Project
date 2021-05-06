@@ -35,5 +35,39 @@
 			"Place one cake layer on serving platter or cake stand then spread a thick layer of buttercream on top. Repeat with remaining layers then frost sides of cake.",
 			"Keep refrigerated until ready to serve."],
 		"image_url": "images/keto-chocolate-cake.jpg"
+	},
+	"recipe4": {
+		"name": "Low Fat Chicken Biryani",
+		"servings": "5 servings",
+		"time": "1 hour 35 minutes",
+		"ingredients": ["3 garlic cloves , finely grated", "2 tsp. finely grated ginger", "1/4 tsp. ground cinnamon", "1 tsp. turmeric", "5 tbsp. natural yogurt", "600g boneless, skinless chicken breast, cut into 4-5cm pieces", "2 tbsp semi-skimmed milk", "Saffron", "4 medium onions", "4 tbsp. rapeseed oil", "1/2 tsp. hot chilli powder", "1 cinnamon stick , broken in half", "5 green cardamom pods , lightly bashed to split", "3 cloves", "1 tsp cumin seed", "280g basmati rice", "700ml chicken stock", "1 tsp garam masala"],
+		"steps": ["In a mixing bowl, stir together the garlic, ginger, cinnamon, turmeric and yogurt with some pepper and ¼ tsp salt. Tip in the chicken pieces and stir to coat (see step 1, above). Cover and marinate in the fridge for about 1 hr or longer if you have time. Warm the milk to tepid, stir in the saffron and set aside.",
+				"Heat oven to 200C. Slice each onion in half lengthways, reserve half and cut the other half into thin slices. Pour 1½ tbsp of the oil onto a baking tray, scatter over the sliced onion, toss to coat, then spread out in a thin, even layer (step 2). Roast for 40-45 mins, stirring halfway, until golden.",
+				"When the chicken has marinated, thinly slice the reserved onion. Heat 1 tbsp oil in a large sauté or frying pan. Fry the onion for 4-5 mins until golden. Stir in the chicken, a spoonful at a time, frying until it is no longer opaque, before adding the next spoonful (this helps to prevent the yogurt from curdling). Once the last of the chicken has been added, stir-fry for a further 5 mins until everything looks juicy. Scrape any sticky bits off the bottom of the pan, stir in the chilli powder, then pour in 100ml water, cover and simmer on a low heat for 15 mins. Remove and set aside.",
+				"Cook the rice while the chicken simmers. Heat another 1 tbsp oil in a large sauté pan, then drop in the cinnamon stick, cardamom, cloves and cumin seeds. Fry briefly until their aroma is released. Tip in the rice (step 3) and fry for 1 min, stirring constantly. Stir in the stock and bring to the boil. Lower the heat and simmer, covered, for about 8 mins or until all the stock has been absorbed. Remove from the heat and leave with the lid on for a few mins, so the rice can fluff up. Stir the garam masala into the remaining 1½ tsp oil and set aside. When the onions are roasted, remove and reduce oven to 180C.",
+				"Spoon half the chicken and its juices into an ovenproof dish, about 25 x 18 x 6cm, then scatter over a third of the roasted onions. Remove the whole spices from the rice, then layer half of the rice over the chicken and onions. Drizzle over the spiced oil. Spoon over the rest of the chicken and a third more onions. Top with the remaining rice (step 4) and drizzle over the saffron-infused milk. Scatter over the rest of the onions, cover tightly with foil and heat through in the oven for about 25 mins. Serve scattered with the mint and coriander."],
+		"image_url": "images/low-fat-chicken-biryani.jpg"
+	},
+	"recipe5": {
+		"name": "Low Calorie Pancakes",
+		"servings": "10 - 12 pancakes",
+		"time": "30 minutes",
+		"ingredients": ["50g self-raising flour", "50g wholemeal or wholegrain flour", "2 small eggs, separated", "150ml skimmed milk", "berries and low-fat yogurt"],
+		"steps": ["Sift the flours into a bowl or wide jug and tip any bits in the sieve back into the bowl. Add the egg yolks and a splash of milk then stir to a thick paste. Add the remaining milk a little at a time so you don’t make lumps in the batter.",
+			"Whisk the egg whites until they stand up in stiff peaks, then fold them carefully into the batter – try not to squash out all the air.",
+			"Heat a non-stick pan over a medium heat and pour in enough batter to make a pancake about 10 cm across. Cook for just under a minute until bubbles begin to pop on the surface and the edges are looking a little dry. Carefully turn the pancake over. If it is a bit wet on top, it may squirt out a little batter as you do so. In that case, leave it on the other side a little longer. Keep warm while you make the remaining pancakes. Serve with your favourite healthy toppings."],
+		"image_url": "images/low-calorie-pancake.jpg"
+	},
+	"recipe6": {
+		"name": "Vegan Banana Bread",
+		"servings": "8 - 10 servings",
+		"time": "40 minutes",
+		"ingredients": ["3 large black bananas", "75ml vegetable oil or sunflower oil", "100g brown sugar", "225g plain flour", "3 heaped tsp baking powder", "3 tsp cinnamon or mixed spice", "50g dried fruit or nuts (optional)"],
+		"steps": ["Heat oven to 200C. Mash 3 large black peeled bananas with a fork, then mix well with 75g vegetable or sunflower oil and 100g brown sugar.",
+			"Add 225g plain flour, 3 heaped tsp baking powder and 3 tsp cinnamon or mixed spice, and combine well. Add 50g dried fruit or nuts, if using.",
+			"Bake in an oiled, lined 2lb loaf tin for 20 minutes. Check and cover with foil if the cake is browning.",
+			"Bake for another 20 minutes, or until a skewer comes out clean.",
+			"Allow to cool a little before slicing. It's delicious freshly baked, but develops a lovely gooey quality the day after."],
+		"image_url": "images/vegan-banana-bread.jpg"
 	}
 }
