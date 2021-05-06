@@ -321,3 +321,13 @@ ol>li {
 .info-display > div {
 	margin-bottom: 30px;
 }
+
+.exercise-form {
+	width: 500px;
+	border-radius: 5px;
+	background-color: #cce0df;
+	padding: 30px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}

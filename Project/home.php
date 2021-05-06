@@ -45,11 +45,28 @@
 
 
 
-	//SQL query for getting totals for calories, fat, protein and sugar intake
-	$sqlTotal = "SELECT SUM(total_cal) as totalCal, SUM(total_fat) as totalFat, SUM(total_protein) as totalProtein, SUM(total_sugar) as totalSugar FROM meal WHERE u_id = '".$uid."' AND date ='".$newDate."';";
+	//SQL query for getting exercise entries
+	$sqlExcercise = "SELECT exercise_name, time, cal_burned FROM exercise WHERE u_id = '".$uid."' AND date = '".$newDate."'";
+	$resultExercise = mysqli_query($conn, $sqlExcercise);
+	$resultExerciseCheck = mysqli_num_rows($resultExercise);
 
-	$resultTotal = mysqli_query($conn, $sqlTotal);
-	$total = mysqli_fetch_assoc($resultTotal);
+
+
+	//SQL query for getting totals for calories, fat, protein and sugar intake
+	$sqlTotalFood = "SELECT SUM(total_cal) as totalCal, SUM(total_fat) as totalFat, SUM(total_protein) as totalProtein, SUM(total_sugar) as totalSugar FROM meal WHERE u_id = '".$uid."' AND date ='".$newDate."';";
+
+	$resultTotalFood = mysqli_query($conn, $sqlTotalFood);
+	$totalFood = mysqli_fetch_assoc($resultTotalFood);
+
+
+	//SQL query for getting total exercise information
+	$sqlTotalExercise = "SELECT SUM(cal_burned) as totalCalBurned FROM exercise WHERE u_id = '".$uid."' AND date = '".$newDate."';";
+
+	$resultTotalExercise = mysqli_query($conn, $sqlTotalExercise);
+	$totalExercise = mysqli_fetch_assoc($resultTotalExercise);
+
+
+	$totalCal = $totalFood['totalCal'] - $totalExercise['totalCalBurned'];
 
 
 	//Check if user has diet information submitted
@@ -85,8 +102,8 @@
 	</div>
 	<div>
 		<div id="diary-section">
-			<form action="previous-entries.php">
-				<button>Previous Entries</button>
+			<form action="add-exercise.php">
+				<button>Add Exercise</button>
 			</form>
 		</div>
 		
@@ -104,7 +121,6 @@
 					if($resultInfoCheck > 0) {
 						$userInfo = mysqli_fetch_assoc($resultInfo);
 						$basalCal = $userInfo['basal_cal'];
-						$totalCal = $total['totalCal'];
 
 						$progress = floor(($totalCal * 100) / $basalCal);
 
@@ -249,6 +265,35 @@
 					</table>
 				</div>
 				<div class="meal">
+					<h4 class="meal-type" >Exercise</h4>
+					<table>
+						<?php							
+							if($resultExerciseCheck > 0) {
+								echo "<tr>
+									<th>Activity</th>
+									<th>Time</th>
+									<th>Calories</th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>";
+
+								while($row = mysqli_fetch_assoc($resultExercise)) {
+									echo "<tr>";
+									echo "<td>".$row['exercise_name']."</td>";
+									echo "<td>".$row['time']." min</td>";
+									echo "<td>".$row['cal_burned']." kcal</td>";
+									echo "</tr>";
+								}
+								
+							} else {
+								echo "No entries to show.";
+							}
+						?>
+					</table>
+				</div>
+
+				<div class="meal">
 					<h4 class="meal-type" >Total</h4>
 					<table>
 						<?php
@@ -261,14 +306,14 @@
 								<th>Sugar</th>
 							</tr>";
 
-							if($total['totalCal'] != null) {
+							if($totalFood['totalCal'] != null) {
 								echo "<tr>";
 								echo "<td></td>";
 								echo "<td></td>";
-								echo "<td>".$total['totalCal']." kcal</td>";
-								echo "<td>".$total['totalFat']." g</td>";
-								echo "<td>".$total['totalProtein']." g</td>";
-								echo "<td>".$total['totalSugar']." g</td>";
+								echo "<td>".$totalCal." kcal</td>";
+								echo "<td>".$totalFood['totalFat']." g</td>";
+								echo "<td>".$totalFood['totalProtein']." g</td>";
+								echo "<td>".$totalFood['totalSugar']." g</td>";
 							} else {
 								echo "<tr>";
 								echo "<td></td>";
