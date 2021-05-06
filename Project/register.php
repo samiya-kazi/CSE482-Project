@@ -45,21 +45,21 @@
 			<h1 class="form-title">Registration</h1>
 
 			<label for="name" class="form-label">Name:</label>
-			<input class="form-input" type="text" id="name" name="name" onkeyup="validateName()">
+			<input class="form-input" type="text" id="name" name="name" onkeyup="validateName()" required="required">
 			<br>
 			<p class="alert" id="name-alert"></p>
 
 			<label for="email" class="form-label">E-mail:</label>
-			<input class="form-input" type="email" id="email" name="email">
+			<input class="form-input" type="email" id="email" name="email" required="required">
 			<br>
 
 			<label for="password" class="form-label">Password:</label>
-			<input class="form-input" type="password" id="password" name="password" onkeyup="validatePassword()">
+			<input class="form-input" type="password" id="password" name="password" onkeyup="validatePassword()" required="required">
 			<br>
 			<p class="alert" id="password-alert"></p>
 
 			<label for="password" class="form-label">Re-type Password:</label>
-			<input class="form-input" type="password" id="confirm-password" name="confirm-password" onkeyup="validateConfirmPassword()">
+			<input class="form-input" type="password" id="confirm-password" name="confirm-password" onkeyup="validateConfirmPassword()" required="required">
 			<br>
 			<p class="alert" id="confirm-password-alert"></p>
 
