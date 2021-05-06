@@ -109,7 +109,7 @@ body {
   	margin: 20px 200px;
 }
 
-button {
+button, .link-button {
 	display: block;
 	margin-top: 20px;
 	margin-left: auto;
@@ -280,6 +280,7 @@ ol>li {
 	border-radius: 30px;
 	height: 20px;
 	margin-bottom: 15px;
+	max-width: 100%;
 }
 
 #progress-percent {

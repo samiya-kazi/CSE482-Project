@@ -13,15 +13,17 @@
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
 
+		$registerConfirm = 0;
+
 		if($resultCheck == 0) {
 			$email = $_POST['email'];
 			$name = $_POST['name'];
 			$password = $_POST['password'];
 			$gender = $_POST['gender'];
 
-			$sql1 = "INSERT INTO users (email, name, password, gender) VALUES ('".$email."', '".$name."', '".$password."', '".$gender."');";
+			$sql = "INSERT INTO users (email, name, password, gender) VALUES ('".$email."', '".$name."', '".$password."', '".$gender."');";
 
-			$result = mysqli_query($conn, $sql1);
+			$result = mysqli_query($conn, $sql);
 		}
 	}
 ?>
@@ -46,11 +48,11 @@
 			<?php
 				if($result == '1') {
 					echo "Registration successful. Please try logging in.<br>";
-					echo "<button href='index.php'>Login</button>";
+					echo "<a href='index.php'>Login</a>";
 				} else {
 					echo "The email you have entered is already in use.<br>";
 					echo "Please use another e-mail to register.<br>";
-					echo "<button href='register.php'>Register</button>";
+					echo "<a href='register.php'>Register</a>";
 				}
 			?>
 		</div>

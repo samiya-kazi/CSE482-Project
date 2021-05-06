@@ -50,7 +50,7 @@
 			<div class="site-info">
 				<h1>Welcome to Nutri-Diary!</h1>
 				<img id="landing-image" src="images/healthy-woman.png">
-				<h4>Track your calories and macro nutrients to reach your health goals!</h4>
+				<h4>Need help understanding your nutrition and diet? Track your calories and macro nutrients to reach your health goals!</h4>
 			</div>
 		</div>
 		<div class="login-section">
