@@ -68,10 +68,10 @@
 			<div class="food-submit">
 				<div class="mini-form">
 					<label for="num-servings">Servings:</label>
-			    	<input class="form-input" type="number" id="num-servings" name="num-servings">
+			    	<input class="form-input" type="number" id="num-servings" name="num-servings" step="0.1" required="required">
 
 			    	<label for="meal-type" class="form-label">Meal-type:</label>
-					<select class="form-select" name="meal-type" id="meal-type">
+					<select class="form-select" name="meal-type" id="meal-type" required="required">
 						<option value="Breakfast">Breakfast</option>
 						<option value="Lunch">Lunch</option>
 						<option value="Dinner">Dinner</option>
