@@ -75,10 +75,10 @@
 						<option value="Breakfast">Breakfast</option>
 						<option value="Lunch">Lunch</option>
 						<option value="Dinner">Dinner</option>
-						<option value="Dinner">Snack</option>
+						<option value="Snack">Snack</option>
 					</select>
 					<br>
-					<button type="submit" value="Submit" onclick="validateForm()">Submit</button>
+					<button type="submit" value="Submit">Submit</button>
 				</div>
 			</div>
 		</form>
