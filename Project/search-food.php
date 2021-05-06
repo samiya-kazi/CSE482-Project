@@ -67,6 +67,7 @@
 			</div>
 			<div class="food-submit">
 				<div class="mini-form">
+					<h2 class="form-title">Add to Meal</h2>
 					<label for="num-servings">Servings:</label>
 			    	<input class="form-input" type="number" id="num-servings" name="num-servings" step="0.1" required="required">
 
