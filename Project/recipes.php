@@ -10,7 +10,7 @@
 <html>
 <head>
 	<title>Nutri-Diary: Recipes</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 	<div class="navbar">
@@ -64,8 +64,7 @@
 <script>
 	function getRecipe(recipe_num) {
 		let req = new XMLHttpRequest()
-		req.open("GET", "recipes.json", asyn=true)
-		console.log(recipe_num)
+		req.open("GET", "recipes/recipes.json", asyn=true)
 
 		req.onload = function() {
 			if(this.status == 200) {

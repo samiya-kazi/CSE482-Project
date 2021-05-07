@@ -11,7 +11,7 @@
 <html>
 <head>
 	<title>Nutri-Diary: Search</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 	<div class="navbar">
