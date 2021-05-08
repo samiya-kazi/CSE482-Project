@@ -13,8 +13,6 @@
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
 
-		$registerConfirm = 0;
-
 		if($resultCheck == 0) {
 			$email = $_POST['email'];
 			$name = $_POST['name'];
@@ -31,7 +29,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nutri-Diary</title>
+	<title>Nutri-Diary: Registration Status</title>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
