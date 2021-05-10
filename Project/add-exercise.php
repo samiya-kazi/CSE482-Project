@@ -15,11 +15,6 @@
 		$exerciseTime = $_POST['time'];
 		$calBurned = $_POST['calories-burned'];
 
-		echo $exerciseName . "<br>";
-		echo $exerciseTime . "<br>";
-		echo $calBurned . "<br>";
-
-
 		$sqlExercise = "INSERT INTO exercise (u_id, date, exercise_name, time, cal_burned) VALUES ('".$uid."', '".$newDate."', '".$exerciseName."', ".$exerciseTime.", ".$calBurned.");";
 
 		$resultExercise = mysqli_query($conn, $sqlExercise);

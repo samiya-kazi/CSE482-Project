@@ -29,17 +29,19 @@
 
 
 		if($goal == "Lose weight") {
-			$basalCal = $basalCal - 500;
+			$calNeed = $basalCal - 500;
 		} else if ($goal == "Gain weight") {
-			$basalCal = $basalCal + 500;
+			$calNeed = $basalCal + 500;
+		} else {
+			$calNeed = $basalCal;
 		}
 
 
 		if($resultInfoCheck == 0) {
-			$sqlNewInfo = "INSERT INTO user_info (u_id, height, weight, goal, age, basal_cal) VALUES ('".$uid."', ".$height.", ".$weight.", '".$goal."', ".$age.", ".$basalCal.");";
+			$sqlNewInfo = "INSERT INTO user_info (u_id, height, weight, goal, age, basal_cal, cal_needed) VALUES ('".$uid."', ".$height.", ".$weight.", '".$goal."', ".$age.", ".$basalCal.", ".$calNeed.");";
 			$resultNewInfo = mysqli_query($conn, $sqlNewInfo);
 		} else {
-			$sqlUpdateInfo = "UPDATE user_info SET height=".$height.", weight=".$weight.", goal='".$goal."', age=".$age.", basal_cal=".$basalCal." WHERE u_id =".$uid;
+			$sqlUpdateInfo = "UPDATE user_info SET height=".$height.", weight=".$weight.", goal='".$goal."', age=".$age.", basal_cal=".$basalCal." cal_needed=".$calNeed." WHERE u_id =".$uid;
 			$resultUpdate = mysqli_query($conn, $sqlUpdateInfo);
 		}
 

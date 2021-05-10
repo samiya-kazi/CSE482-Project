@@ -65,7 +65,7 @@
 	$resultTotalExercise = mysqli_query($conn, $sqlTotalExercise);
 	$totalExercise = mysqli_fetch_assoc($resultTotalExercise);
 
-
+	//Calculate total calories eaten minus calories burned
 	$totalCal = $totalFood['totalCal'] - $totalExercise['totalCalBurned'];
 
 

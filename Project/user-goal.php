@@ -8,7 +8,6 @@
 
 	$uid = $_SESSION['uid'];
 	$name = $_SESSION['name'];
-	$gender = $_SESSION['gender'];
 
 	//Check if user has diet information submitted
 	$sqlInfo = "SELECT * FROM user_info WHERE u_id =".$uid.";";
@@ -50,13 +49,15 @@
 						echo "<div>Weight: ".$userInfo['weight']." kg</div>";
 						echo "<div>Weight goal: ".$userInfo['goal']."</div>";
 						echo "<div>Basal metabolic rate: ".$userInfo['basal_cal']."</div>";
+						echo "<div>Calories needed: ".$userInfo['cal_needed']."</div>";
 					} else {
 						echo "<div>Name: ".$name."</div>
 							<div>Age:</div>
 							<div>Height:</div>
 							<div>Weight:</div>
 							<div>Weight goal:</div>
-							<div>Basal metabolic rate:</div>";
+							<div>Basal metabolic rate:</div>
+							<div>Calories needed:</div>";
 					}
 				?>
 				
