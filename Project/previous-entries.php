@@ -12,10 +12,10 @@
 		$date = $_POST['date-search'];
 
 		//Convert date to format that matches MySQL server (YYYY-dd-mm)
-		$sqlDate = date("Y-d-m", strtotime($date));
+		$sqlDate = date("Y-m-d", strtotime($date));
 
 		//Covert date to format that is easier for the user to read (dd/mm/YYYY)
-		$newDate = date("d/m/Y", strtotime($date));
+		$newDate = date("d-m-Y", strtotime($date));
 		$dayOfWeek = date("l", strtotime($date));
 
 

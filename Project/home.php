@@ -13,7 +13,7 @@
 	$newDate = date("Y-m-d", strtotime($date));
 
 	//Set day of week
-	$dayOfWeek = date("l", strtotime(date("m-d-Y", strtotime($date))));
+	$dayOfWeek = date("l", strtotime($date));
 
 
 	//SQL query for getting breakfast food details

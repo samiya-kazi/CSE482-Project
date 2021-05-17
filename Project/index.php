@@ -15,7 +15,7 @@
 			$uid = $resultRow['id'];
 			$name = $resultRow['name'];
 			$gender = $resultRow['gender'];
-			$date = date("d/m/y");
+			$date = date("d-m-Y");
 
 			session_start();
 			$_SESSION['uid'] = $uid;
