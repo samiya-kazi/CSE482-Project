@@ -52,7 +52,7 @@
 								$calories = $row['calories'];
 
 								echo "<tr>";
-								echo "<td><input type='radio' id='".$foodID."' name='food-select' value='".$foodID."'</td>";
+								echo "<td><input type='radio' id='".$foodID."' name='food-select' value='".$foodID."' required='required'></td>";
 								echo "<td>".$foodName."</td>";
 								echo "<td>".$servingSize."</td>";
 								echo "<td>".$calories." kcal</td>";

@@ -6,6 +6,10 @@
 		header("Location:index.php");
 	}
 
+	if(!isset($_POST['food-select'])) {
+		header("Location:home.php");
+	}
+
 	$userID = $_SESSION['uid'];
 	$date = $_SESSION['date'];
 	$newDate = date("Y-m-d", strtotime($date));
