@@ -120,9 +120,9 @@
 				<?php
 					if($resultInfoCheck > 0) {
 						$userInfo = mysqli_fetch_assoc($resultInfo);
-						$basalCal = $userInfo['basal_cal'];
+						$calGoal = $userInfo['cal_needed'];
 
-						$progress = floor(($totalCal * 100) / $basalCal);
+						$progress = floor(($totalCal * 100) / $calGoal);
 
 						echo "<div id='progress' style='width:".$progress."%'>";
 						echo "<div id='progress-percent'>".$progress."%</div></div>";
