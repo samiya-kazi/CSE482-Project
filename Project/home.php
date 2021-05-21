@@ -73,6 +73,9 @@
 	$sqlInfo = "SELECT * FROM user_info WHERE u_id =".$uid.";";
 	$resultInfo = mysqli_query($conn, $sqlInfo);
 	$resultInfoCheck = mysqli_num_rows($resultInfo);
+
+
+	mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>

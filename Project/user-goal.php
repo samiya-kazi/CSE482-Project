@@ -59,6 +59,8 @@
 							<div>Basal metabolic rate:</div>
 							<div>Calories needed:</div>";
 					}
+
+					mysqli_close($conn);
 				?>
 				
 			</div>

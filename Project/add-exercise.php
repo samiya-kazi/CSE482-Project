@@ -19,10 +19,13 @@
 
 		$resultExercise = mysqli_query($conn, $sqlExercise);
 
+		mysqli_close($conn);
+
 		if($resultExercise) {
 			header("Location:home.php");
 		} else {
-			echo "An error has occured.";
+			echo "An error has occured.<br>";
+			echo "<a href='home.php'>Return to home.</a>";
 		}
 	}
 	

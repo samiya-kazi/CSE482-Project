@@ -68,6 +68,9 @@
 
 		$resultTotalExercise = mysqli_query($conn, $sqlTotalExercise);
 		$totalExercise = mysqli_fetch_assoc($resultTotalExercise);
+
+
+		mysqli_close($conn);
 	}
 ?>
 

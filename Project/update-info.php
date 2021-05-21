@@ -45,6 +45,9 @@
 			$resultUpdate = mysqli_query($conn, $sqlUpdateInfo);
 		}
 
+
+		mysqli_close($conn);
+
 		header("Location:user-goal.php");
 	}
 ?>

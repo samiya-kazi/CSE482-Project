@@ -62,6 +62,9 @@
 						} else {
 							echo "No results found.";
 						}
+
+
+						mysqli_close($conn);
 					?>
 				</div>
 			</div>

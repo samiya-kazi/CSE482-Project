@@ -33,12 +33,16 @@
 	$totalSugar = $sugar * $numServings;
 
 	$addMealSql = "INSERT INTO meal (u_id, f_id, servings, meal_type, date, total_cal, total_fat, total_protein, total_sugar) VALUES ('".$userID."', '".$foodID."', ".$numServings.", '".$mealType."', '".$newDate."', ".$totalCalories.", ".$totalFat.", ".$totalProtein.", ".$totalSugar.");";
+
 	$addMealResult = mysqli_query($conn, $addMealSql);
+
+	mysqli_close($conn);
 
 	if($addMealResult) {
 		header("Location:home.php");
 	} else {
-		echo "An error has occured.";
+		echo "An error has occured.<br>";
+		echo "<a href='home.php'>Return to home.</a>";
 	}
 
 ?>

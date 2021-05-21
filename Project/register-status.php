@@ -1,6 +1,10 @@
 <?php  
 	include_once 'includes/db.php';
 
+	if(!isset($_POST['email'])) {
+		header("Location:index.php");
+	}
+
 	$email = $_POST['email'];
 	$name = $_POST['name'];
 	$password = $_POST['password'];
@@ -22,6 +26,8 @@
 			$sql = "INSERT INTO users (email, name, password, gender) VALUES ('".$email."', '".$name."', '".$password."', '".$gender."');";
 
 			$result = mysqli_query($conn, $sql);
+
+			mysqli_close($conn);
 		}
 	}
 ?>
@@ -44,9 +50,6 @@
 	<div>
 		<div class="register-status">
 			<?php
-				if(!isset($_POST['email'])) {
-					header("Location:index.php");
-				}
 				if($result == '1') {
 					echo "Registration successful. Please try logging in.<br>";
 					echo "<a href='index.php'>Login</a>";
