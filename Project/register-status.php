@@ -44,6 +44,9 @@
 	<div>
 		<div class="register-status">
 			<?php
+				if(!isset($_POST['email'])) {
+					header("Location:index.php");
+				}
 				if($result == '1') {
 					echo "Registration successful. Please try logging in.<br>";
 					echo "<a href='index.php'>Login</a>";
